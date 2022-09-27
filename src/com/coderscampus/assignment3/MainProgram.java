@@ -26,9 +26,12 @@ public class MainProgram {
 		BufferedReader fileReader = null;
 		LineNumberReader lnr  = null; //file line counter, as to determine the size of user array
 		try { 
-			
-			fileReader = new BufferedReader(new FileReader("C:/Users/pierp/OneDrive/Documentos/MyRepository/PreloadBuild/Output/assignment3-data.txt"));
-				
+			//File f = new File(dataPath(""), "/image1.jpg");
+			String workingDir = System.getProperty("user.dir");
+			System.out.println(workingDir);
+			workingDir=workingDir+"/assignment3-data.txt";
+			//fileReader = new BufferedReader(new FileReader("C:/Users/pierp/OneDrive/Documentos/MyRepository/PreloadBuild/Output/assignment3-data.txt"));
+			fileReader = new BufferedReader(new FileReader(workingDir));	
 			lnr = new LineNumberReader(fileReader);
 			while ((lnr.readLine()) != null);
 //			System.out.println("File line number: " + lnr.getLineNumber());
