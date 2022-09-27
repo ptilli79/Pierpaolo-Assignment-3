@@ -29,7 +29,7 @@ public class MainProgram {
 			//File f = new File(dataPath(""), "/image1.jpg");
 			String workingDir = System.getProperty("user.dir");
 			System.out.println(workingDir);
-			workingDir=workingDir+"/assignment3-data.txt";
+			workingDir=workingDir+"/data/assignment3-data.txt";
 			//fileReader = new BufferedReader(new FileReader("C:/Users/pierp/OneDrive/Documentos/MyRepository/PreloadBuild/Output/assignment3-data.txt"));
 			fileReader = new BufferedReader(new FileReader(workingDir));	
 			lnr = new LineNumberReader(fileReader);
