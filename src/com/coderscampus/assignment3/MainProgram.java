@@ -28,7 +28,7 @@ public class MainProgram {
 		try { 
 			//File f = new File(dataPath(""), "/image1.jpg");
 			String workingDir = System.getProperty("user.dir");
-			System.out.println(workingDir);
+			//System.out.println(workingDir);
 			workingDir=workingDir+"/data/assignment3-data.txt";
 			//fileReader = new BufferedReader(new FileReader("C:/Users/pierp/OneDrive/Documentos/MyRepository/PreloadBuild/Output/assignment3-data.txt"));
 			fileReader = new BufferedReader(new FileReader(workingDir));	
@@ -49,7 +49,10 @@ public class MainProgram {
 		if (line_counter>0) {
 		
 			User users[] = new User[line_counter];
-			fileReader = new BufferedReader(new FileReader("C:/Users/pierp/OneDrive/Documentos/MyRepository/PreloadBuild/Output/assignment3-data.txt"));
+			String workingDir = System.getProperty("user.dir");
+			workingDir=workingDir+"/data/assignment3-data.txt";
+			//fileReader = new BufferedReader(new FileReader("C:/Users/pierp/OneDrive/Documentos/MyRepository/PreloadBuild/Output/assignment3-data.txt"));
+			fileReader = new BufferedReader(new FileReader(workingDir));
 			String line = "";
 			while ((line = fileReader.readLine()) != null) {
 //				System.out.println(line);	
